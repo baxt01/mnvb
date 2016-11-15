@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//	   //\\        //\\		  //\\		  // \\              //¦¦*;~_;_	      //
+// 	  //  \\      //  \\             //  \\		 //   \\	    // ¦¦      '*,    //
+//	 //    \\    //    \\           //    \\	//     \\	   //  ¦¦        ]    //
+//	//	\\  //      \\         //      \\      //       \\	  //   ¦¦=->>=_-¬)    //
+//     //	 \\//        \\       //	\\    //         \\	 //    ¦¦        }    //
+//    /       MNVB.co.uk      \\     //	 	 \\  //		  \\    //     ¦¦	 ;    //
+//   //			       \\   //		  \\//		   \\  //      ¦¦      ,*     //
+//  //				\\ //		   \\		    \\//       ¦¦*-¬#='       //
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Thank you for choosing to use the http://www.mnvb.co.uk CMS style frame work.
+I have developed and coded all of the neccessary files to make up this system in full,
+you are free to use this software and any of it's files on your own project under the general freeware license,
+http://www.mnvb.co.uk or any of its staff CAN NOT and WILL NOT be held responsable for the use of these files 
+or the affects caused as a direct or in part,
+it is 100% your choice to use these files and your responsibility on the safe use and legality of your use of them!
+
+
+READ ME!!!!!
+
+Inside this .zip folder you should find!
+4 directories:
+		images  -- bgtile.jpg
+		includes  -- connection.php
+			     constants.php
+			     footer.php
+			     form_functions.php
+			     functions.php
+			     header.php
+			     session.php
+
+		javascripts  -- empty
+		stylesheets  -- public.css
+
+14 .php files
+		content.php
+		create_subject.php
+		delete_page.php
+		delete_subject.php
+		edit_page.php
+		edit_subject.php
+		index.php
+		login.php
+		logout.php
+		new_page.php
+		new_subject.php
+		new_user.php
+		page_form.php
+		staff.php
+
+All of these files and directories are required to keep the system working if you change the name of any 
+file or directory be sure to search out the corrisponding $variables with all files and or file paths 
+such as includes/functions.php.
+
+This whole system requires a mysql database with tables to run without this database nothing 
+will work at all,
+there will be an sql file included in this .zip file which can use and or edit to your needs then use to 
+create the exact database and tables the system needs,
+but if you prefer not to execute my sql comands on your server here is a list of tables and fields needed 
+for you to create on your own system, (remember all systems vary from each other so please use which method you have)
+
+TABLES:
+
+pages,
+subjects,
+users,
+
+the pages tables:
+
+ 1 id int(11)  NULL: No  AUTO_INCREMENT Primary,
+ 2 subject_id int(11)   NULL: No 
+ 3 menu_name varchar(30) utf8_general_ci  NULL: No,
+ 4 position int(3)  NULL: No 
+ 5 visible tinyint(1)  NULL: No
+ 6 content text utf8_general_ci NULL: No 
+
+the subjects table:
+
+ 1 id int(11) NULL: No AUTO_INCREMENT primary,
+ 2 menue_name varchar(30) NULL: No,
+ 3 position int(3) NULL: No,
+ 4 visible tinyint(1) NULL: No,
+
+the user table:
+
+ 1 id int(11) NULL: No AUTO_INCREMENT primary,
+ 2 username varchar(50) NULL: No,
+ 3 hashed_password varchar(40) NULL: No,
+
+you can also set the index options to all these table fields to speed up the searching process but not essential,
+
+things you will need to edit:
+inside the "includes" directory, open the constants.php file in your favorite text // coding editor,
+in this file you will find all of the database connection settings like user name and password database name,
+so where it says DB_USER, "your user name"  change that for the user name you use to log into your data base system
+then change "your password" to the password you use to log into your database system,
+change the "your DB_NAME" to the name of the database you want to create the above tables into including any prefix_
+most servers accept local host as the server name if yours does not change this line too.
+save this file and close it
+
+next if you want to take my web address from the footer and take away my credit for building this system for you then
+open the foot.php file and edit line 2 however i would rather think you could leave a link back to me in there thanks if you do.
+save and close the footer.php file.
+
+next open the header.php file edit the <title>mnvb.co.uk</title> line to say what you want it to in the tab of the browser,
+and edit the <h1> MNVB</h1> loine to give the site pages your sites name,
+
+you can either edit my CSS file in the stylesheets directory DO NOT change my selector name feel free to edit the colours and other stuff in there just keep the selector names and classes the same
+it would be better to create a second style sheet if you have extra selectors you need to use in your style as well as changing the colour schema in my .css file
+
+
+other than that if you have comments or requests or questions feel free to email me: mike@mnvb.co.uk
